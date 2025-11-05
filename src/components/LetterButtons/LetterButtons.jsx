@@ -14,7 +14,7 @@ function LetterButtons( { text , guessedLetters  , onLetterClick}){
                return (
                  <button key ={index} 
                   value ={letter}
-                 className={`m-3 p-3 rounded-xl border-2 border-solid ${getButtonStyle(letter , originalLetterSet, guessedLetterSet)}`}
+                 className={`m-2 p-3 rounded-xl border-2 border-solid ${getButtonStyle(letter , originalLetterSet, guessedLetterSet)}`}
                  disabled = {guessedLetterSet.has(letter)}
                  onClick={handleLetterClick}
                 >
