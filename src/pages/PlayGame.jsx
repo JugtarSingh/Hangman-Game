@@ -4,8 +4,10 @@ import MaskedText from '../components/MaskedText/MaskedText'
 import LetterButtons from "../components/LetterButtons/LetterButtons";
 import Hangman from '../components/Hangman/Hangman';
 import { WordContext } from '../context/WordContext';
+import  wordStore  from '../stores/WordStore';
 function PlayGame() {
-    const { word } = useContext(WordContext);
+    // const { word } = useContext(WordContext);
+    const {word} = wordStore();
     const [guessedLetters, setGuessedLetters] = useState([]);
     const [step, setStep] = useState(0);
     function onLetterClick(value) {

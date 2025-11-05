@@ -3,10 +3,11 @@ import Button from "../components/Button/Button";
 import HangmanLogo from '../assets/images/Hangman.png'
 import { useContext, useEffect, useState } from "react";
 import { WordContext } from "../context/WordContext";
-
+import wordStore from '../stores/WordStore'
 function Home (){
     
-    const { setWordList , setWord } = useContext(WordContext);
+    // const { setWordList , setWord } = useContext(WordContext);
+    const { setWordList , setWord } = wordStore();
     async function fetchWords() {
         const response = await fetch('http://localhost:3000/words');
         const words = await response.json();
